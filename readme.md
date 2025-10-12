@@ -4,22 +4,21 @@
 <br/>
 
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+  <a href="https://github.com/IhaveNoIdead/">
+    <img src="/assets/image/DennisWithAGun.png" alt="DennisWithAGun" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+  <h3 align="center">AD - CI4 Demo — My Coffee</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
+This repository contains the scource for a class assignemnt 
 </div>
 
 <br/>
 
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/ci4-template)
+![](https://visit-counter.vercel.app/counter.png?page=IhaveNoIdead/CI4-MyCoffee)
 
 <!-- ! Make sure it was similar to your github -->
 
@@ -54,23 +53,18 @@ It helps teams quickly bootstrap backend + frontend projects, with simple sample
 ---
 
 ## Overview
-
-This template provides a **minimal CodeIgniter 4 project layout** with conventions for file organization, commit practices, and simple modules.
-
-It is designed to be **easy to start with** and a **reference for adding new features**.
-
-* **Purpose**: a clean starting point for CI4 apps.
-* **Audience**: developers who want a predictable structure and quick onboarding.
-
+This class assignment is an **Online Coffee Shop Web Application** built with CodeIgniter 4
 ### Key Components
 
-These are **sample modules** included (or suggested) for learning how to add features:
+Key componets that has been implemented or to be implemented in the future **(probably)**
 
-| Component                 | Purpose                                                             | Notes                                                   |
-| ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
-| **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
-| **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+| Component/Feature         | Purpose                                                             |
+| ------------------------- | ------------------------------------------------------------------- |
+| **Product Module**        | Display coffee products with details and prices                     |
+| **Cart Module**           | Allow users to add/remove products and review selected product/s    |
+| **Order Module**          | Handles checkout and order history                                  |
+| **Admin Dashboard**       | Lets admins add/edit products and manage orders                     |
+| **Auth System**           | Login/register for customers and admins                             |
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 
@@ -91,9 +85,6 @@ These are **sample modules** included (or suggested) for learning how to add fea
 #### Databases
 
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge\&logo=postgresql\&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge\&logo=firebase\&logoColor=black)
 
 <!-- ! Keep only the used technology -->
 
@@ -104,7 +95,7 @@ These are **sample modules** included (or suggested) for learning how to add fea
 Run the development stack and the app (rebuild if needed):
 
 ```cmd
-docker compose up --watch
+docker compose up -d --build
 ```
 
 Common utility commands (run inside the project root):
