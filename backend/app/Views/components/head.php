@@ -1,206 +1,162 @@
-<?php
-// Component: components/head.php
-// Data contract:
-// $title: string
-?>
+    <?php
+        $title = $title ?? 'My Coffee';
+    ?>
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title><?= esc($title)?></title>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title><?= esc($title ?? null ? $title . ": " : "") ?>Sample kaya to hahahahaha!!!!</title>
+        <style>
+            :root
+            {
+                --dark-espresso: #4E342E;
+                --espresso: #6F5853;
+                --light-espresso: #917F7B;
 
-    <!-- Default CDN includes -->
-    <!-- Google Fonts: Playfair Display + Lato (global) -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+                --dark-cappuccino: #A67B5B;
+                --cappuccino: #B8947B;
+                --light-cappuccino: #CAAE9B;
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+                --dark-latte: #DCC9BB;
+                --latte: #E5D6CC;
+                --light-latte: #EDE4DD;
+            }
+            
+            /*espresso color */
+            .color-dark-espresso
+            {
+                background-color: var(--dark-espresso);
+            }
 
-    <!-- Font Awsome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            .color-espresso
+            {
+                background-color: var(--espresso);
+            }
 
-    <!-- Global base typography -->
-    <style>
-        :root {
-            --sage-dark: #6F8E78;
-            --sage: #8DAA91;
-            --sage-light: #CFE6D7;
+            .color-light-espresso
+            {
+                background-color: var(--light-espresso);
+            }
+            
+            /*espresso color text */
+             .text-color-dark-espresso
+            {
+                color: var(--dark-espresso);
+            }
 
-            --rose-dark: #A87D79;
-            --rose: #C7A6A0;
-            --rose-light: #EDD9D6;
+             .text-color-espresso
+            {
+                color: var(--espresso);
+            }
 
-            --stone-dark: #d6d6d6ff;
-            --stone: #aaaaaaff;
-            --stone-light: #c2c2c2ff;
-        }
+             .text-color-light-espresso
+            {
+                color: var(--light-espresso);
+            }
 
-        .swatch {
-            width: 100%;
-            height: 3rem;
-            border-radius: .375rem;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-        }
+            /*primary btn hover */
+            .hover-primary:hover
+            {
+                background-color: var(--espresso);
+                transition: background-color 0.5s ease, transform 0.5s ease;
+                transform: scale(1.02);
+            }
 
-        /* Button color utilities using design tokens */
-        .btn-sage {
-            background: var(--sage-dark);
-            color: white;
-            transition: all;
-            transition-duration: 300ms;
-        }
+            /*cappuccino color */
+            .color-dark-cappuccino
+            {
+                background-color: var(--dark-cappuccino);
+            }
 
-        .btn-sage:hover {
-            background: var(--sage);
-        }
+            .color-cappuccino
+            {
+                background-color: var(--cappuccino);
+            }
 
-        .btn-sage-dark {
-            background: var(--sage);
-            color: white;
-            transition: all;
-            transition-duration: 300ms;
-        }
+            .color-light-cappuccino
+            {
+                background-color: var(--light-cappuccino);
+            }
 
-        .btn-sage-dark:hover {
-            background: var(--sage-dark);
-        }
+            /*cappuccino color text */
+             .text-color-dark-cappuccino
+            {
+                color: var(--dark-cappuccino);
+            }
 
-        .btn-rose {
-            background: var(--rose-dark);
-            color: white;
-            transition: all;
-            transition-duration: 300ms;
-        }
+             .text-color-cappuccino
+            {
+                color: var(--cappuccino);
+            }
 
-        .btn-rose:hover {
-            background: var(--rose);
-        }
+             .text-color-light-cappuccino
+            {
+                color: var(--light-cappuccino);
+            }
 
-        .btn-rose-dark {
-            background: var(--rose);
-            color: white;
-            transition: all;
-            transition-duration: 300ms;
-        }
+            /*secondary btn hover */
+            .hover-secondary:hover
+            {
+                background-color: var(--cappuccino);
+                transition: background-color 0.5s ease, transform 0.5s ease;
+                transform: scale(1.02);
+            }
 
-        .btn-rose-dark:hover {
-            background: var(--rose-dark);
-        }
+            /*border btn*/
+            .border-btn
+            {
+                border-color:  var(--dark-cappuccino);
+                border-width: 3px;
+                color: var(--dark-cappuccino);
+            }
 
-        .btn-border {
-            border-color: var(--rose);
-            border-width: 2px;
-            color: var(--rose);
-            font-weight: 600;
-            transition: all;
-            transition-duration: 300ms;
-        }
+            .border-btn-disable
+            {
+                border-color:  #4a5565;
+                border-width: 3px;
+                color: #4a5565;
+            }
 
-        .btn-border:hover {
-            color: white;
-            background: var(--rose);
-        }
+            /*border btn hover */
+            .hover-border:hover
+            {
+                background-color: var(--light-latte);
+                transition: background-color 0.5s ease, transform 0.5s ease;
+                transform: scale(1.02);
+            }
 
-        .btn-border-dark {
-            border-color: var(--rose-dark);
-            border-width: 2px;
-            color: var(--rose-dark);
-            font-weight: 600;
-            transition: all;
-            transition-duration: 300ms;
-        }
+            /*latte color */
+            .color-dark-latte
+            {
+                background-color: var(--dark-latte);
+            }
 
-        .btn-border-dark:hover {
-            color: white;
-            background: var(--rose-dark);
-        }
+            .color-latte
+            {
+                background-color: var(--latte);
+            }
 
-        .btn-disabled {
-            background-color: var(--stone);
-            color: white;
-            cursor: not-allowed;
-        }
+            .color-light-latte
+            {
+                background-color: var(--light-latte);
+            }
 
-        /* Header CTA uses the main accent (sage-dark) */
-        .header-cta {
-            background: var(--sage-dark);
-            color: white;
-        }
+            /*latte color text */
+             .text-color-dark-latte
+            {
+                color: var(--dark-latte);
+            }
 
-        .header-cta:hover {
-            background: var(--sage);
-        }
+             .text-color-latte
+            {
+                color: var(--latte);
+            }
 
-        /* Small token-driven utilities */
-        .text-sage-dark {
-            color: var(--sage-dark);
-        }
-
-        .text-sage {
-            color: var(--sage);
-        }
-
-        .bg-sage-light {
-            background: var(--sage-light);
-        }
-
-        .bg-sage {
-            background: var(--sage);
-        }
-
-        .bg-sage-dark {
-            background: var(--sage-dark);
-        }
-
-        .bg-stone-light {
-            background: var(--stone-light);
-        }
-
-        /* Custom scrollbar styling using sage-light token (#CFE6D7) */
-        /* WebKit-based browsers */
-        ::-webkit-scrollbar {
-            width: 12px;
-            height: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--sage-light);
-            border-radius: 8px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--sage) 0%, var(--sage-dark) 100%);
-            border-radius: 8px;
-            border: 3px solid rgba(0, 0, 0, 0.03);
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, var(--sage-dark) 0%, var(--sage) 100%);
-        }
-
-        /* Firefox */
-        * {
-            scrollbar-width: thin;
-            scrollbar-color: var(--sage-dark) var(--sage-light);
-        }
-
-        /* Utility class to apply custom scrollbars to specific containers */
-        .custom-scroll {
-            overflow: auto;
-        }
-
-        /* Base typography */
-        html,
-        body {
-            font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: 'Playfair Display', Georgia, serif;
-        }
-    </style>
-</head>
+             .text-color-light-latte
+            {
+                color: var(--light-latte);
+            }
+        </style>
+    </head>
