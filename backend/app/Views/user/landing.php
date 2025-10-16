@@ -9,12 +9,10 @@
         <!-- NavBar -->
         <?= view('components/header') ?>
 
-        <!-- CTA -->
-        <?= view('components/cta',[
-            'heading' => 'Fresh Coffee Every Day With My Coffee',
-            'subHeading' => 'Start your morning right with a cup brewed just for you',
-            'primary_button' => null,
-            'secondary_button' => ['btnName' => 'Order Now', 'version' => true, 'link' => '#']
+        <!-- Hero -->
+        <?= view('components/hero',[
+            'heading' => 'October Special',
+            'subHeading' => '15% Off for new users & 10% Off for old users',
         ])?>
 
         <main class="space-y-12 py-10">
@@ -97,6 +95,14 @@
                     ])?>
                 </div>
             </section>
+
+             <!-- CTA -->
+            <?= view('components/cta',[
+                'heading' => 'Fresh Coffee Every Day With My Coffee',
+                'subHeading' => 'Start your morning right with a cup brewed just for you',
+                'primary_button' => null,
+                'secondary_button' => ['btnName' => 'Order Now', 'version' => true, 'link' => '#']
+            ])?>
         </main>
 
         <!-- Footer -->
