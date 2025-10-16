@@ -19,44 +19,50 @@
 
         <main class="space-y-12 py-10">
             <!-- Popular section -->
-            <section class="max-w-5xl mx-auto color-dark-latte rounded-xl shadow p-10">
+            <section class="max-w-7xl mx-auto color-dark-latte rounded-xl shadow p-10">
                 <h2 class="text-4xl font-bold mb-8 text-color-dark-espresso text-center"> Popular </h2>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    <?= view('components/cards/card', [
+                <div class="grid grid-cols-2 gap-8 place-items-center">
+                    <?= view('components/cards/highlight_Card', [
                         'title' => 'Espresso',
                         'description' => 'Strong and bold, perfect for coffee lovers',
                         'price' => '₱120',
-                        'link' => null,
-                        'status' => null,
-                        'color' => null,
+                        'status' => 'Most Bought This Week',
+                        'color' => 'color-espresso',
                         'image' => 'https://www.thespruceeats.com/thmb/HJrjMfXdLGHbgMhnM0fMkDx9XPQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-espresso-765702-hero-03_cropped-ffbc0c7cf45a46ff846843040c8f370c.jpg'
                     ])?>
 
-                    <?= view('components/cards/card', [
+                    <?= view('components/cards/highlight_Card', [
                         'title' => 'Cappuccino',
                         'description' => 'Perfect balance of espresso and frothy foam',
                         'price' => '₱140',
-                        'link' => null,
-                        'status' => null,
-                        'color' => null,
+                        'status' => 'Most Bought This Week',
+                        'color' => 'color-espresso',
                         'image' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Cappuccino_in_original.jpg/1200px-Cappuccino_in_original.jpg'
                     ])?>
                     
-                    <?= view('components/cards/card', [
+                    <?= view('components/cards/highlight_Card', [
                         'title' => 'Latte',
                         'description' => 'Smooth espresso blended with creamy milk',
                         'price' => '₱150',
-                        'link' => null,
-                        'status' => null,
-                        'color' => null,
+                        'status' => 'Most Bought Today',
+                        'color' => 'color-espresso',
                         'image' => 'https://upload.wikimedia.org/wikipedia/commons/d/d8/Caffe_Latte_at_Pulse_Cafe.jpg'
+                    ])?>
+
+                    <?= view('components/cards/highlight_Card', [
+                        'title' => 'Mocha',
+                        'description' => 'Perfect balance of deep espresso, steamed milk, and rich chocolate',
+                        'price' => '₱200',
+                        'status' => 'Most Bought This Month',
+                        'color' => 'color-espresso',
+                        'image' => 'https://www.folgerscoffee.com/folgers/recipes/_Hero%20Images/Detail%20Pages/5598/image-thumb__5598__schema_image/MochaIced-hero.58f3878d.jpg'
                     ])?>
                 </div>
             </section>
             
             <!-- Services Section -->
-            <section class="max-w-5xl mx-auto color-light-latte text-black rounded-xl shadow p-10">
+            <section class="max-w-7xl mx-auto color-light-latte text-black rounded-xl shadow p-10">
                 <h2 class="text-4xl text-color-dark-espresso font-bold mb-8 text-center"> Services </h2>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
