@@ -109,10 +109,10 @@
 
 
         <!-- Cards -->
-        <section>
+        <section class="space-y-12">
             <h2 class="text-3xl font-bold mb-4">Card Sample</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                 <div>
+                <div>
                     <?= view('components/cards/card', [
                         'title' => 'Sample',
                         'description' => 'Description',
@@ -147,7 +147,34 @@
                         'image' => 'https://www.thespruceeats.com/thmb/HJrjMfXdLGHbgMhnM0fMkDx9XPQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-espresso-765702-hero-03_cropped-ffbc0c7cf45a46ff846843040c8f370c.jpg'
                     ])?>
                 </div>
-            </div>
+            </div> 
+            
+                <h2 class="text-3xl font-bold mb-4">Highlight Card Sample</h2>
+                <div>
+                    <?= view('components/cards/highlight_Card', [
+                        'title' => 'Mocha',
+                        'description' => 'Perfect balance of deep espresso, steamed milk, and rich chocolate',
+                        'price' => '₱200',
+                        'status' => 'Most Bought This Month',
+                        'color' => 'color-espresso',
+                        'image' => 'https://www.folgerscoffee.com/folgers/recipes/_Hero%20Images/Detail%20Pages/5598/image-thumb__5598__schema_image/MochaIced-hero.58f3878d.jpg'
+                    ])?>
+                </div>
+
+                
+                <h2 class="text-3xl font-bold mb-4">User Card Sample</h2>
+                <div>
+                    <?= view('components/cards/user_card', [
+                        'first_Name' => 'John',
+                        'middle_Initial' => null,
+                        'last_Name' => 'Doe',
+                        'suffix' => null,
+                        'status' => 'Regular Member',
+                        'color' => 'color-dark-espresso',
+                        'image' => 'https://i.pinimg.com/236x/dd/f0/11/ddf0110aa19f445687b737679eec9cb2.jpg'
+                    ])?>
+                </div>
+
         </section>
 
         <!-- Logo -->
