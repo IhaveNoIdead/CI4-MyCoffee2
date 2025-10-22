@@ -20,4 +20,9 @@ class Users extends BaseController
     {
         return view('user/roadMap');
     }
+
+    public function menuPage(): string
+    {
+        return view('user/menuPage');
+    }
 }
