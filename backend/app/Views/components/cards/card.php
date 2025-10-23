@@ -20,6 +20,17 @@
             <?php if(!empty($link)) : ?>
                 <a class="mt-2 underline text-blue-600"><?= esc($link) ?></a>
             <?php endif; ?>
+
+            <?php if (!empty($secondary_button)): ?>
+                <div class="mt-8">
+                    <?= view('components/buttons/secondary_button', [
+                        'btnName' => $secondary_button['btnName'],
+                        'link' => $secondary_button['link'],
+                        'version' => $secondary_button['version']
+                    ])?>
+                </div>
+               
+            <?php endif; ?>
         </div>
         
         <?php if(!empty($status)) : ?>
