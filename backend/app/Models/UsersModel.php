@@ -9,10 +9,20 @@ class UsersModel extends Model
     protected $table            = 'users';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
+    protected $returnType       = '\App\\Entities\\User';
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'first_name',
+        'middle_name',
+        'last_name',
+        'email',
+        'password_hash',
+        'type',
+        'account_status',
+        'gender',
+        'profile_image',
+    ];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -21,7 +31,7 @@ class UsersModel extends Model
     protected array $castHandlers = [];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
