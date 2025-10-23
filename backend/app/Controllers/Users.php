@@ -25,4 +25,9 @@ class Users extends BaseController
     {
         return view('user/menuPage');
     }
+
+    public function userProfile(): string
+    {
+        return view('user/userProfile');
+    }
 }
