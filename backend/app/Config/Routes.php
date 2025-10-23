@@ -8,10 +8,16 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Users::index');
 $routes->get('/moodBoard', 'Users::moodBoard');
 $routes->get('/roadMap', 'Users::roadMap');
-$routes->get('/login', 'Auth::login');
-$routes->get('/signup', 'Auth::signup');
 $routes->get('/admin/dashboard', 'Admin::dashboard');
 $routes->get('/menuPage', 'Users::menuPage');
 $routes->get('/userProfile', 'Users::userProfile');
 $routes->get('/orderPage', 'Users::orderPage');
+
+$routes->get('/loginPage', 'Auth::showLoginPage');
+$routes->post('/loginPage', 'Auth::loginPage');
+
+$routes->get('/logout', 'Auth::logout');
+
+$routes->get('/signupPage', 'Auth::showSignupPage');
+$routes->post('/signupPage', 'Auth::signupPage');
 

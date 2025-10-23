@@ -7,7 +7,7 @@
             <div class="hidden md:flex space-x-6 font-bold text-lg">
                 <a href="/menuPage" class="text-[30px] text-white"> Products </a>
                 <a href="#" class="text-[30px] text-white"> Cart </a>
-                <a href="/login" class="text-[30px] text-white"> Login </a>
+                <a href="/loginPage" class="text-[30px] text-white"> Login </a>
             </div>
         </div>
     </nav>
