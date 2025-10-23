@@ -21,6 +21,7 @@
                             'link' => null,
                             'status' => null,
                             'color' => null,
+                            'secondary_button' => ['btnName' => 'Add to Cart', 'version' => false, 'link' => '#'],
                             'image' => 'https://www.thespruceeats.com/thmb/HJrjMfXdLGHbgMhnM0fMkDx9XPQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-espresso-765702-hero-03_cropped-ffbc0c7cf45a46ff846843040c8f370c.jpg'
                         ])?>
                     </div>
@@ -33,6 +34,7 @@
                             'link' => null,
                             'status' => null,
                             'color' => null,
+                            'secondary_button' => ['btnName' => 'Add to Cart', 'version' => false, 'link' => '#'],
                             'image' => 'https://www.thespruceeats.com/thmb/HJrjMfXdLGHbgMhnM0fMkDx9XPQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-espresso-765702-hero-03_cropped-ffbc0c7cf45a46ff846843040c8f370c.jpg'
                         ])?>
                     </div>
@@ -45,6 +47,7 @@
                             'link' => null,
                             'status' => null,
                             'color' => null,
+                            'secondary_button' => ['btnName' => 'Add to Cart', 'version' => false, 'link' => '#'],
                             'image' => 'https://www.thespruceeats.com/thmb/HJrjMfXdLGHbgMhnM0fMkDx9XPQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-espresso-765702-hero-03_cropped-ffbc0c7cf45a46ff846843040c8f370c.jpg'
                         ])?>
                     </div>
@@ -57,6 +60,7 @@
                             'link' => null,
                             'status' => null,
                             'color' => null,
+                            'secondary_button' => ['btnName' => 'Add to Cart', 'version' => false, 'link' => '#'],
                             'image' => 'https://www.thespruceeats.com/thmb/HJrjMfXdLGHbgMhnM0fMkDx9XPQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-espresso-765702-hero-03_cropped-ffbc0c7cf45a46ff846843040c8f370c.jpg'
                         ])?>
                     </div>
@@ -69,6 +73,7 @@
                             'link' => null,
                             'status' => null,
                             'color' => null,
+                            'secondary_button' => ['btnName' => 'Add to Cart', 'version' => false, 'link' => '#'],
                             'image' => 'https://www.thespruceeats.com/thmb/HJrjMfXdLGHbgMhnM0fMkDx9XPQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-espresso-765702-hero-03_cropped-ffbc0c7cf45a46ff846843040c8f370c.jpg'
                         ])?>
                     </div>
@@ -86,6 +91,7 @@
                             'link' => null,
                             'status' => null,
                             'color' => null,
+                            'secondary_button' => ['btnName' => 'Add to Cart', 'version' => false, 'link' => '#'],
                             'image' => 'https://images.ctfassets.net/rve58b4kyp9e/2x13frzbOBgS0ucwvEckoX/8330ab06f0096bbd8d078c095a26be77/Coffee_Shop_Muffins_3.jpg'
                         ])?>
                     </div>
@@ -98,6 +104,7 @@
                             'link' => null,
                             'status' => null,
                             'color' => null,
+                            'secondary_button' => ['btnName' => 'Add to Cart', 'version' => false, 'link' => '#'],
                             'image' => 'https://images.ctfassets.net/rve58b4kyp9e/2x13frzbOBgS0ucwvEckoX/8330ab06f0096bbd8d078c095a26be77/Coffee_Shop_Muffins_3.jpg'
                         ])?>
                     </div>
@@ -110,6 +117,7 @@
                             'link' => null,
                             'status' => null,
                             'color' => null,
+                            'secondary_button' => ['btnName' => 'Add to Cart', 'version' => false, 'link' => '#'],
                             'image' => 'https://images.ctfassets.net/rve58b4kyp9e/2x13frzbOBgS0ucwvEckoX/8330ab06f0096bbd8d078c095a26be77/Coffee_Shop_Muffins_3.jpg'
                         ])?>
                     </div>
@@ -122,6 +130,7 @@
                             'link' => null,
                             'status' => null,
                             'color' => null,
+                            'secondary_button' => ['btnName' => 'Add to Cart', 'version' => false, 'link' => '#'],
                             'image' => 'https://images.ctfassets.net/rve58b4kyp9e/2x13frzbOBgS0ucwvEckoX/8330ab06f0096bbd8d078c095a26be77/Coffee_Shop_Muffins_3.jpg'
                         ])?>
                     </div>
@@ -134,6 +143,7 @@
                             'link' => null,
                             'status' => null,
                             'color' => null,
+                            'secondary_button' => ['btnName' => 'Add to Cart', 'version' => false, 'link' => '#'],
                             'image' => 'https://images.ctfassets.net/rve58b4kyp9e/2x13frzbOBgS0ucwvEckoX/8330ab06f0096bbd8d078c095a26be77/Coffee_Shop_Muffins_3.jpg'
                         ])?>
                     </div>
