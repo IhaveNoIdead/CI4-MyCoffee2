@@ -12,4 +12,5 @@ $routes->get('/login', 'Auth::login');
 $routes->get('/signup', 'Auth::signup');
 $routes->get('/admin/dashboard', 'Admin::dashboard');
 $routes->get('/menuPage', 'Users::menuPage');
+$routes->get('/userProfile', 'Users::userProfile');
 
