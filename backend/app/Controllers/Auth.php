@@ -11,7 +11,8 @@ class Auth extends BaseController
     {
         $session = session();
 
-        if ($session->has('user')) {
+        if ($session->has('user')) 
+        {
             return redirect()->to('/');
         }
 
@@ -68,19 +69,18 @@ class Auth extends BaseController
             'display_name' => trim(($userArr['first_name'][0] ?? '') . ' ' . ($userArr['middle_name'][0] ?? '') . ' ' . ($userArr['last_name'] ?? '')),
         ]);
 
+        log_message('debug', 'User Session: ' . print_r($session->get('user'), true));
+
         $type = strtolower($userArr['type'] ?? 'regular_client');
 
-        if ($type === 'manager')
+        if ($type === 'admin')
         {
             return redirect()->to('/admin/dashboard');
         }
-
-        if ($type === 'regular_client' || $type === 'premium_client') 
+        else
         {
             return redirect()->to('/');
         }
-
-         return redirect()->to('/');
     }
 
     public function logout()
@@ -103,7 +103,7 @@ class Auth extends BaseController
         $errors = $session->getFlashdata('errors') ?? [];
         $old = $session->getFlashdata('old') ?? [];
 
-        return view('user/signupPage', ['errors' => $errors, 'old' => $old]);
+        return view('/signupPage', ['errors' => $errors, 'old' => $old]);
     }
 
     public function signupPage()
@@ -118,7 +118,7 @@ class Auth extends BaseController
         $validation->setRule('first_name', 'First name', 'required|min_length[2]|max_length[100]');
         $validation->setRule('middle_name', 'Middle name', 'permit_empty|max_length[100]');
         $validation->setRule('last_name', 'Last name', 'required|min_length[2]|max_length[100]');
-        $validation->setRule('email', 'Email', 'required|valid_email|is_unique[user.email]');
+        $validation->setRule('email', 'Email', 'required|valid_email|is_unique[users.email]');
         $validation->setRule('password', 'Password', 'required|min_length[6]');
         $validation->setRule('password_confirm', 'Password Confirmation', 'required|matches[password]');
 
