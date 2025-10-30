@@ -10,7 +10,7 @@ $routes->get('/moodBoard', 'Users::moodBoard');
 $routes->get('/roadMap', 'Users::roadMap');
 $routes->get('/admin/dashboard', 'Admin::dashboard');
 $routes->get('/admin/accountsPage', 'Admin::accountsPage');
-$routes->get('/menuPage', 'Users::menuPage');
+$routes->get('/admin/menuPage', 'Admin::menuPage');
 $routes->get('/userProfile', 'Users::userProfile');
 $routes->get('/admin/orderPage', 'Admin::orderPage');
 
