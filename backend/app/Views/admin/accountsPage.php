@@ -53,7 +53,7 @@
                         </thead>
 
                         <tbody class="color-light-latte divide-y divide-gray-700">
-                            <?php if (!empty($users)): ?>
+                            <?php if (!empty($pageAccounts)): ?>
                                 <?php foreach ($pageAccounts as $user): ?>
                                     <tr>
                                         <td class="px-6 py-4"><?= esc($user->first_name) ?></td>
