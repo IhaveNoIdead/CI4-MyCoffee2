@@ -16,6 +16,7 @@
         ])?>
 
         <main class="space-y-12 py-10">
+
             <!-- Popular section -->
             <section class="max-w-7xl mx-auto color-dark-latte rounded-xl shadow p-10">
                 <h2 class="text-4xl font-bold mb-8 text-color-dark-espresso text-center"> Popular </h2>
