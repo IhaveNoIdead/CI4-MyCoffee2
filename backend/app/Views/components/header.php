@@ -7,7 +7,11 @@
             <div class="hidden md:flex space-x-6 font-bold text-lg">
                 <a href="/menuPage" class="text-[30px] text-white"> Products </a>
                 <a href="#" class="text-[30px] text-white"> Cart </a>
-                <a href="/loginPage" class="text-[30px] text-white"> Login </a>
+                <?php if(session()->has('user')): ?>
+                    <a href="/logout" class="text-[30px] text-white"> Logout </a>
+                <?php else: ?>
+                    <a href="/loginPage" class="text-[30px] text-white"> Login </a>
+                <?php endif; ?>
             </div>
         </div>
     </nav>
