@@ -30,7 +30,7 @@
     <body class="color-dark-latte">
         <!-- NavBar -->
         <?= view('components/header') ?>
-
+        <!-- commemt -->
         <main class="space-y-12 py-10">
 
             <section class=" mx-8 my-8 p-6 color-light-cappuccino rounded-xl shadow">
