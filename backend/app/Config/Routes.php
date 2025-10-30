@@ -12,7 +12,7 @@ $routes->get('/admin/dashboard', 'Admin::dashboard');
 $routes->get('/admin/accountsPage', 'Admin::accountsPage');
 $routes->get('/menuPage', 'Users::menuPage');
 $routes->get('/userProfile', 'Users::userProfile');
-$routes->get('/orderPage', 'Users::orderPage');
+$routes->get('/admin/orderPage', 'Admin::orderPage');
 
 $routes->get('/loginPage', 'Auth::showLoginPage');
 $routes->post('/loginPage', 'Auth::loginPage');

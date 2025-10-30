@@ -30,9 +30,4 @@ class Users extends BaseController
     {
         return view('user/userProfile');
     }
-
-    public function orderPage(): string
-    {
-        return view('user/orderPage');
-    }
 }
