@@ -1,8 +1,8 @@
 <?php
     $pageNumber = isset($_GET['page']) ? max(1, (int) $_GET['page']) : 1;
-    $ordersPerPage = isset($_GET['accountsPerPage']) ? max(1, (int) $_GET['accountsPerPage']) : 10;
+    $ordersPerPage = isset($_GET['ordersPerPage']) ? max(1, (int) $_GET['ordersPerPage']) : 10;
 
-    $dataToUse = $users ?? [];
+    $dataToUse = $orders ?? [];
     $total = count($dataToUse);
     $totalPages = (int) max(1, ceil($total / $ordersPerPage));
 
@@ -63,11 +63,11 @@
                                     <tr>
                                         <td class="px-6 py-4"><?= esc($order->id) ?></td>
                                         <td class="px-6 py-4"><?= esc($order->user_id) ?></td>
+                                        <td class="px-6 py-4"><?= esc($order->items) ?></td>
                                         <td class="px-6 py-4"><?= esc($order->total_amount) ?></td>
                                         <td class="px-6 py-4"><?= esc($order->status) ?></td>
                                         <td class="px-6 py-4"><?= esc($order->payment_method) ?></td>
                                         <td class="px-6 py-4"><?= esc($order->payment_status) ?></td>
-                                        <td class="px-6 py-4"><?= esc($order->payment_method) ?></td>
                                         <td class="px-6 py-4"><?= esc($order->delivery_address) ?></td>
                                         <td class="px-6 py-4"><?= esc($order->notes) ?></td>
                                         <td class="px-6 py-4"><?= esc($order->created_at) ?></td>
@@ -87,8 +87,8 @@
                         <div class="flex justify-between items-center">
                             <div class="flex items-center space-x-2">
                                 <form method="get" style="display:flex;align-items:center;gap:.5rem;">
-                                    <label for="accountsPerPage" class="text-gray-700 text-sm">Show</label>
-                                    <select id="accountsPerPage" name="accountsPerPage" class="p-1 border rounded text-sm" onchange="this.form.submit()">
+                                    <label for="ordersPerPage" class="text-gray-700 text-sm">Show</label>
+                                    <select id="ordersPerPage" name="ordersPerPage" class="p-1 border rounded text-sm" onchange="this.form.submit()">
                                         <option value="5" <?php echo $ordersPerPage == 5 ? 'selected' : ''; ?>>5</option>
                                         <option value="10" <?php echo $ordersPerPage == 10 ? 'selected' : ''; ?>>10</option>
                                         <option value="20" <?php echo $ordersPerPage == 20 ? 'selected' : ''; ?>>20</option>
@@ -104,11 +104,11 @@
                                         $startPage = max(1, $pageNumber - 3);
                                         $endPage = min($totalPages, $pageNumber + 3); 
                                     ?>
-                                    <a class="px-3 py-1 border rounded <?php echo ($pageNumber <= 1) ? 'opacity-50 pointer-events-none' : ''; ?>" href="?<?php echo querySetter(['page' => max(1, $pageNumber - 1), 'accountsPerPage' => $ordersPerPage]); ?>">Prev</a>
+                                    <a class="px-3 py-1 border rounded <?php echo ($pageNumber <= 1) ? 'opacity-50 pointer-events-none' : ''; ?>" href="?<?php echo querySetter(['page' => max(1, $pageNumber - 1), 'ordersPerPage' => $ordersPerPage]); ?>">Prev</a>
                                     <?php for ($p = $startPage; $p <= $endPage; $p++): ?>
-                                        <a class="px-3 py-1 border rounded <?php echo ($p == $pageNumber) ? 'text-white' : ''; ?>" href="?<?php echo querySetter(['page' => $p, 'accountsPerPage' => $ordersPerPage]); ?>"><?php echo $p; ?></a>
+                                        <a class="px-3 py-1 border rounded <?php echo ($p == $pageNumber) ? 'text-white' : ''; ?>" href="?<?php echo querySetter(['page' => $p, 'ordersPerPage' => $ordersPerPage]); ?>"><?php echo $p; ?></a>
                                     <?php endfor; ?>
-                                    <a class="px-3 py-1 border rounded <?php echo ($pageNumber >= $totalPages) ? 'opacity-50 pointer-events-none' : ''; ?>" href="?<?php echo querySetter(['page' => min($totalPages, $pageNumber + 1), 'accountsPerPage' => $ordersPerPage]); ?>">Next</a>
+                                    <a class="px-3 py-1 border rounded <?php echo ($pageNumber >= $totalPages) ? 'opacity-50 pointer-events-none' : ''; ?>" href="?<?php echo querySetter(['page' => min($totalPages, $pageNumber + 1), 'ordersPerPage' => $ordersPerPage]); ?>">Next</a>
                                 <?php endif; ?>
                             </div>
                         </div>
