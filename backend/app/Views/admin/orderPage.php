@@ -37,7 +37,7 @@
                 <div class="mb-6">
                     <h2 class="text-2xl text-center text-color-dark-espresso font-bold mt-4 mb-4 mx-4">Orders</h2>
                 </div>
-
+                <?= view('components/control_panels/filter_search_sort/adminorders') ?>
                 <div class="overflow-x-auto rounded-lg shadow">
                     <table class="min-w-full text-sm text-left text-color-dark-espresso">
                         <thead class="color-light-latte">
