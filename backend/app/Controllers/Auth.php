@@ -11,8 +11,7 @@ class Auth extends BaseController
     {
         $session = session();
 
-        if ($session->has('user')) 
-        {
+        if ($session->has('user')) {
             return redirect()->to('/');
         }
 
@@ -34,8 +33,7 @@ class Auth extends BaseController
 
         $post = $request->getPost();
 
-        if(!$validation->run($post))
-        {
+        if (!$validation->run($post)) {
             $session->setFlashdata('errors', $validation->getErrors());
             $session->setFlashdata('old', $post);
             return redirect()->back()->withInput();
@@ -44,8 +42,7 @@ class Auth extends BaseController
         $userModel = new \App\Models\UsersModel();
         $user = $userModel->where('email', $email)->first();
 
-        if(!$user)
-        {
+        if (!$user) {
             $session->setFlashdata('errors', ['email' => 'No account found for that email']);
             $session->setFlashdata('old', ['email' => $email]);
             return redirect()->back()->withInput();
@@ -53,8 +50,7 @@ class Auth extends BaseController
 
         $userArr = is_array($user) ? $user : (method_exists($user, 'toArray') ? $user->toArray() : (array) $user);
 
-        if (! password_verify($request->getPost('password'), $userArr['password_hash'] ?? '')) 
-        {
+        if (! password_verify($request->getPost('password'), $userArr['password_hash'] ?? '')) {
             $session->setFlashdata('errors', ['password' => 'Incorrect password']);
             $session->setFlashdata('old', ['email' => $email]);
             return redirect()->back()->withInput();
@@ -73,12 +69,9 @@ class Auth extends BaseController
 
         $type = strtolower($userArr['type'] ?? 'regular_client');
 
-        if ($type === 'admin')
-        {
+        if ($type === 'admin') {
             return redirect()->to('/admin/dashboard');
-        }
-        else
-        {
+        } else {
             return redirect()->to('/');
         }
     }
@@ -103,7 +96,7 @@ class Auth extends BaseController
         $errors = $session->getFlashdata('errors') ?? [];
         $old = $session->getFlashdata('old') ?? [];
 
-        return view('/signupPage', ['errors' => $errors, 'old' => $old]);
+        return view('user/signupPage', ['errors' => $errors, 'old' => $old]);
     }
 
     public function signupPage()
@@ -112,7 +105,7 @@ class Auth extends BaseController
 
         $request = service('request');
         $post = $request->getPost();
-        
+
         $validation = \Config\Services::validation();
 
         $validation->setRule('first_name', 'First name', 'required|min_length[2]|max_length[100]');
@@ -122,8 +115,7 @@ class Auth extends BaseController
         $validation->setRule('password', 'Password', 'required|min_length[6]');
         $validation->setRule('password_confirm', 'Password Confirmation', 'required|matches[password]');
 
-        if(!$validation->run($post))
-        {
+        if (!$validation->run($post)) {
             $session->setFlashdata('errors', $validation->getErrors());
             $session->setFlashdata('old', $post);
 
@@ -132,8 +124,7 @@ class Auth extends BaseController
 
         $userModel = new UsersModel();
 
-        if($userModel->where('email', $post['email'])->first())
-        {
+        if ($userModel->where('email', $post['email'])->first()) {
             $session->setFlashdata('errors', ['email' => 'Email already registered']);
             $session->setFlashdata('old', $post);
 
@@ -151,13 +142,10 @@ class Auth extends BaseController
 
         $inserted = $userModel->insert($data);
 
-        if(!$inserted)
-        {
+        if (!$inserted) {
             $session->setFlashdata('errors', ['db' => 'Failed to create account. Please try again.']);
             return redirect()->back()->withInput();
-        }
-        else
-        {
+        } else {
             $session->setFlashdata('success', 'Account created successfully! You can now login.');
             return redirect()->to('/loginPage');
         }
